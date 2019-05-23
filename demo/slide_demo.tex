@@ -1,0 +1,142 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+
+% CHANGE THIS
+\newcommand{\subjectName}{Subject Name}
+\newcommand{\subjectCode}{Subject Code}
+\newcommand{\schoolName}{School Name}
+\newcommand{\universityName}{University Name}
+\newcommand{\weekNumber}{XX}
+\newcommand{\yearNumber}{XXXX}
+\newcommand{\slideURL}{bitly.com/SOMETHING}
+\newcommand{\pathToLogo}{../img/uts-logo/University_of_Technology_Sydney_logo}
+%% - %%
+
+\input{../etc/slide_settings}
+
+\begin{document}
+
+\maketitle
+
+% Summary slide
+\begin{frame}{Week \weekNumber}
+  Always start with a summary slide
+  \begin{enumerate}
+  \item First item
+  \item Second item
+  \item Third item
+  \end{enumerate}
+  \end{frame}
+
+% Normal slide
+\begin{frame}{First Frame}
+    Hello, world!
+  \end{frame}
+
+ % Typography
+  \begin{frame}[fragile]{Typography}
+      \begin{verbatim}The theme provides sensible defaults to
+\emph{emphasize} text, \alert{accent} parts
+or show \textbf{bold} results.\end{verbatim}
+
+  \begin{center}becomes\end{center}
+
+  The theme provides sensible defaults to \emph{emphasize} text,
+  \alert{accent} parts or show \textbf{bold} results.
+\end{frame}
+
+  % Code
+  \begin{frame}[fragile]
+
+  \begin{python}[caption={My\_Caption.py},firstnumber=10]
+# This is a comment
+print("Latex keywordstyles not working?")
+if this_is_highlighted:
+    print("Yay, this works!")
+else:
+    print("Why isn't this working?")
+\end{python}
+\end{frame}
+
+% or...
+
+\begin{frame}
+  \pythonexternal[firstline=2]{script_demo.py}
+\end{frame}
+
+\begin{frame}
+  Definition \pythoninline{class MyClass} means \dots
+  \end{frame}
+  
+% Blocks and Columns
+\begin{frame}{Blocks and columns}
+  Three different block environments are pre-defined and may be styled with an
+  optional background color.
+
+  \begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+      \begin{block}{Default}
+        Block content.
+      \end{block}
+
+      \begin{alertblock}{Alert}
+        Block content.
+      \end{alertblock}
+
+      \begin{exampleblock}{Example}
+        Block content.
+      \end{exampleblock}
+
+    \column{0.5\textwidth}
+
+      \metroset{block=fill}
+
+      \begin{block}{Default}
+        Block content.
+      \end{block}
+
+      \begin{alertblock}{Alert}
+        Block content.
+      \end{alertblock}
+
+      \begin{exampleblock}{Example}
+        Block content.
+      \end{exampleblock}
+
+  \end{columns}
+\end{frame}
+
+% Figures
+\begin{frame}
+  \begin{figure}
+    \caption{My caption}
+    \center{\includegraphics[width=\textwidth] {\pathToLogo}}
+    \end{figure}
+  \end{frame}
+
+  % Quotations
+  \begin{frame}{Quotation}
+    \blockquote[{\cite[109]{small}}]{Some interesting quote.}
+\end{frame}
+
+% Questions slide
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+
+% Add next week readings
+\nocite{big}
+
+\begin{frame}[allowframebreaks]{Reading for next week}
+
+  \bibliographystyle{agsm}
+  \bibliography{../bib/bibliography}
+
+\end{frame}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

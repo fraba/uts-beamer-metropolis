@@ -1,0 +1,52 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+
+% CHANGE THIS
+\newcommand{\subjectName}{Subject Name}
+\newcommand{\subjectCode}{Subject Code}
+\newcommand{\schoolName}{School Name}
+\newcommand{\universityName}{University Name}
+\newcommand{\weekNumber}{XX}
+\newcommand{\yearNumber}{XXXX}
+\newcommand{\slideURL}{bitly.com/SOMETHING}
+\newcommand{\pathToLogo}{img/uts-logo/University_of_Technology_Sydney_logo}
+%% - %%
+
+\input{etc/slide_settings}
+
+\begin{document}
+
+\maketitle
+
+% Summary slide
+\begin{frame}{Week \weekNumber}
+  Always start with a summary slide
+  \begin{enumerate}
+  \item First item
+  \item Second item
+  \item Third item
+  \end{enumerate}
+  \end{frame}
+
+% Normal slide
+\begin{frame}{First Frame}
+    Hello, world!
+  \end{frame}
+
+% Questions slide
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Reading for next week}
+
+  \bibliography{bib/bibliography}
+
+\end{frame}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
